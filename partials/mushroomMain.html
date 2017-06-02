@@ -1,0 +1,13 @@
+<div>
+    <label>Poisonus</label>
+    <input type="radio" name="mush" ng-click="edible = false">
+
+    <label>Non-Poisonus</label>
+    <input type="radio" name="mush" ng-click="edible = true">
+
+    <input ng-model="search" type="text">
+    <div ng-repeat="items in mushrooms |filter: {name: search, edible}">
+        <h3>{{items.name}}</h3>
+        <p>{{items.description}}</p>
+    </div>
+</div>
